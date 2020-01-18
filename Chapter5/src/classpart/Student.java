@@ -9,6 +9,13 @@ public class Student {
 	String studentName;		// 이름 
 	String address;			// 주소
 	
+	public Student() {} 	// --> 디폴트 생성자. 다른 생성자가 없을 경우 컴파일러가 자동으로 생성해 줌
+	
+	public Student(int id, String name) { // 생성자 2
+		studentId = id;
+		studentName = name;
+	}
+	
 	// Method 구현
 	public void getStudentInfo() {	// 반환하는게 없는 경우 void
 		System.out.println("이름 : " + studentName + ", 학번: "+ studentId + ", 주소: "+address);
