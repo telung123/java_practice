@@ -5,9 +5,9 @@ package classpart;
 public class Student {
 	
 	// 멤버변수 (OR property)
-	public int studentId;			// 학생 ID
-	public String studentName;		// 이름 
-	public String address;			// 주소
+	int studentId;			// 학생 ID
+	String studentName;		// 이름 
+	String address;			// 주소
 	
 	// Method 구현
 	public void getStudentInfo() {	// 반환하는게 없는 경우 void
