@@ -1,4 +1,4 @@
-package thisEx;
+package thisex;
 
 public class PersonTest {
 
