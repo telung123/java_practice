@@ -9,7 +9,7 @@ public class PersonTest {
 		Person noName = personNoname.getSelf();
 		
 		
-		Person personKim = new Person("±è°¡ºó", 30);		
+		Person personKim = new Person("ê¹€ê°€ë¹ˆ", 30);		
 		personKim.getInfo();
 		Person p = personKim.getSelf();
 		
