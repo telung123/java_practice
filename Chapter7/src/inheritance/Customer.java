@@ -9,7 +9,16 @@ public class Customer {
 	double bonusRatio;
 	
 	
-	public Customer() { // 디폴트 생성자에서는 주로 멤버변수의 초기화를 한다.
+//	public Customer() { // 디폴트 생성자에서는 주로 멤버변수의 초기화를 한다.
+//		grade = "SILVER";
+//		bonusRatio = 0.01;
+//	}
+//	
+	
+	public Customer(int customerID, String customerName) {
+		this.customerID = customerID;
+		this.customerName = customerName;
+		
 		grade = "SILVER";
 		bonusRatio = 0.01;
 	}
