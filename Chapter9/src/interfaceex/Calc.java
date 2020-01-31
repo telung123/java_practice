@@ -12,18 +12,19 @@ public interface Calc {
 	int divide(int num1, int num2);
 	
 	
-	// 디폴트 method
+	// 디폴트 method - 오버라이딩 가능함
 	default void description(){
 		System.out.println("정수 계산기를 구현합니다.");
 		// myMethod(); // private method 사용
 	}
 	
-	// Interface 타입으로 바로 가져다 쓸 수 있게 static으로 생성
+	// static으로 생성 - 정적 메소드. 
+	// Interface 상속받은 클래스 생성없이도 interface 타입으로 사용 가능
 	static int total(int[] arr) {
 		int total =0;
 		
 		for(int i : arr) {
-			total+=1;
+			total+=(i+1);
 		}
 		// myStaticMethod(); - static method이기 때문에 마찬가지로 호출도 static 내부에서 해야 함.
 		

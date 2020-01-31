@@ -10,6 +10,7 @@ public class CalcTest {
 		
 		// 주로 인터페이스 Type 으로 선언됨
 		Calc calc = new CompleteCalc();
+
 		
 		int n1 = 10;
 		int n2 = 2;
@@ -21,7 +22,7 @@ public class CalcTest {
 	
 		// 다운캐스팅
 		if ( calc instanceof CompleteCalc ) {		
-			CompleteCalc calcCom = (CompleteCalc)calc;		
+			CompleteCalc calcCom = (CompleteCalc)calc;
 			calcCom.showInfo();
 		}
 		

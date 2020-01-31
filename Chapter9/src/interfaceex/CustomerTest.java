@@ -14,14 +14,15 @@ public class CustomerTest {
 		System.out.println("========================================");
 		Buy buyer = customer; // Buy 타입으로 캐스팅.
 		buyer.buy(); // .sell() 메서드는 호출할 수 없다.
-		buyer.order(); // Buy 인터페이스의 order() 가 호출되는게 아님에 유의하자. 메서드 호출주소는 인스턴스에 따름.
+		buyer.order(); // Buy 인터페이스의 order() 가 호출되는게 아님에 유의하자. 
+		// 메서드 호출주소는 "생성된 인스턴스"에 따름. (new Customer())
 		
 		Sell seller = customer; // Sell 타입으로 캐스팅
 		seller.sell(); // .buy() 메서드는 호출할 수 없다
 		
 		// 다운 캐스팅
 		if ( buyer instanceof Customer ) {			
-			((Customer) buyer).sell(); 
+			((Customer) buyer).sell(); // 가능!
 		}
 	}
 

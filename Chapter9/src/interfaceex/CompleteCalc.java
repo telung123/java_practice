@@ -15,12 +15,7 @@ public class CompleteCalc extends Calculator {
 	}
 	
 	
-	// 디폴트 Override
-	@Override
-	public void description() {
-		System.out.println("재정의한 디폴트");
-	}
-	
+
 
 	public void showInfo() {
 		System.out.println("모두 구현 했음");
