@@ -18,7 +18,7 @@ class Student{
 	 * */  
 	@Override
 	public boolean equals(Object obj) {		
-		if ( obj instanceof Student) {
+		if ( obj instanceof Student) { // 같은 Type이 아닌 경우 비교할필요도 없이 false
 			Student std = (Student)obj;
 			return (std.studentId == this.studentId); // 논리적 Equals 체크
 		}		
