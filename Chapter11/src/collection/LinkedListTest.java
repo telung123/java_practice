@@ -5,27 +5,24 @@ import java.util.LinkedList;
 public class LinkedListTest {
 
 	public static void main(String[] args) {
+		LinkedList<String> mylist = new LinkedList<String>();
 		
-		LinkedList<String> myList = new LinkedList<String>();
+		mylist.add("A");
+		mylist.add("B");
+		mylist.add("C");
 		
-		myList.add("A");
-		myList.add("B");
-		myList.add("C");	
-
-		myList.add(1, "D");
+		mylist.add(1, "D");
+		System.out.println(mylist.toString());
 		
-		System.out.println(myList);
+		mylist.removeFirst();
+		mylist.removeLast();
 		
-		myList.removeLast();
-		System.out.println(myList);
-		
-		myList.remove();
-		System.out.println(myList);
+		System.out.println(mylist.toString());
 		
 		
-		System.out.println("========================");
-		for(int i =0, len = myList.size(); i < len; i++) {			
-			System.out.println(myList.get(i));
+		for ( int i = 0, len = mylist.size(); i < len; i++ ) {
+			String value = mylist.get(i);
+			System.out.println(value);
 		}
 	}
 
