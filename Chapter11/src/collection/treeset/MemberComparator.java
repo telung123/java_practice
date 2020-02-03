@@ -52,7 +52,7 @@ public class MemberComparator implements Comparator<MemberComparator>{
 	
 	
 	@Override
-	public int compare(MemberComparator member1, MemberComparator member2) {
+	public int compare(MemberComparator member1, MemberComparator member2) {		
 		// 비교하여 양수(오름차순) / 음수(내림차순) 을 반환하는것으로 비교한다.
 		return (member1.getMemberId() - member2.getMemberId());
 		// Member name 오름차순 정렬

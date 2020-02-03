@@ -14,9 +14,9 @@ public class HashSetTest {
 		set.add("강감찬");
 		set.add("이순신"); // 중복 허용하지 않음. 무시됨
 		
-		System.out.println(set.toString());
+		System.out.println(set.toString()); // 이순신 하나밖에 없음!
 		
-		Iterator<String> ir = set.iterator(); // 모든 Collection 에 사용 가능.
+		Iterator<String> ir = set.iterator(); // Iterator - 모든 Collection 에 사용 가능.
 		
 		while(ir.hasNext()) { // hasNext() - 다음 엘리먼트가 존재하는지
 			String str = ir.next(); // next value

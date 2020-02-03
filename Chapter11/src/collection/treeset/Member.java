@@ -1,6 +1,6 @@
 package collection.treeset;
 
-public class Member implements Comparable<Member> {
+public class Member implements Comparable<Member>{
 	
 	private int memberId;
 	private String memberName;
@@ -48,18 +48,17 @@ public class Member implements Comparable<Member> {
 	}
 	
 	
-	
-	@Override // TreeSet 을 사용할 경우 반드시 필요함
+	@Override
 	public int compareTo(Member member) {
+//		return (this.memberId - member.memberId); // 오름차순 정렬 (양수 반환)
+//		return (this.memberId - member.memberId) * (-1) // 내림차순 정렬
 		
-		// this 와 매개변수 객체를 비교.
-		// 비교하여 양수(오름차순) / 음수(내림차순) 을 반환하는것으로 비교한다.
-		// return (this.memberId - member.memberId);
-		// return (this.memberId - member.memberId) * (-1); 내림차순 정렬 
-		
-		// 이름으로 정렬
-		return this.memberName.compareTo(member.getMemberName());
+		// 만약 Member Name (String) 으로 비교 하고 싶을경우,
+		// 원래 정의되어있는 String 객체의 compareTo 를 이용한다.
+		return this.memberName.compareTo(member.memberName);
 	}
+	
+	
 	
 	
 }
