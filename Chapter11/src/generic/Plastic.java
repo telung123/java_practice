@@ -1,16 +1,13 @@
 package generic;
 
-public class Plastic extends Material{
-	
-	@Override
-	public String toString() {
-		return "재료는 Plastic 입니다";
+public class Plastic extends Material {
+	public String toString () {
+		return "재료: 플라스틱";
 	}
 
 	@Override
 	public void doPrinting() {
-		System.out.println("플라스틱 printing");
-		
+		System.out.println("플라스틱 입니다.");		
 	}
 
 }

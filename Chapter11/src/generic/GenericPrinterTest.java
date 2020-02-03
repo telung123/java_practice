@@ -4,26 +4,22 @@ public class GenericPrinterTest {
 
 	public static void main(String[] args) {
 		
-		
-		// Generic 인스턴스 생성시, 아래처럼 new GenericPrinter<>(); - 다이아몬드 연산자 내부에 값을 넣지 않을 수 있다(알아서 유추 함)
-//		GenericPrinter<Powder> powderPrinter = new GenericPrinter<>();
-		GenericPrinter<Powder> powderPrinter = new GenericPrinter<Powder>();
-		
-		
-		// Generic 타입만 선언한다고 해서 타입이 생성되는게 아님. set 으로 타입 생성!
+		// 참조자료형으로 사용할 클래스는 생성되어 있어야 함.
 		Powder powder = new Powder();
-		powderPrinter.setMaterial(powder);
+		Plastic plastic = new Plastic();
 		
-		System.out.println(powderPrinter);
-		powderPrinter.printing();
-		
+		/* Diamond 연산자 사용할 때 - new GeneridPrinter<> <- 이렇게 비우면 앞에서 선언한 타입으로 유추하여 생성 됨. */
+		GenericPrinter<Powder> powderPrinter = new GenericPrinter<Powder>();
+		powderPrinter.setMaterial(powder); // 생성한 참조자료형 클래스 - Setter
 		
 		GenericPrinter<Plastic> plasticPrinter = new GenericPrinter<Plastic>();
-		Plastic plastic = new Plastic();
 		plasticPrinter.setMaterial(plastic);
 		
-		System.out.println(plasticPrinter);
-		plasticPrinter.printing();
+		System.out.println(powderPrinter.toString());
+		System.out.println(plasticPrinter.toString());
+		
+		powderPrinter.printing();
+		plasticPrinter.printing();		
 		
 	}
 
