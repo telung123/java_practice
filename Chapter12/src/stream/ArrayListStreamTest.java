@@ -8,21 +8,24 @@ public class ArrayListStreamTest {
 
 	public static void main(String[] args) {
 		
-		List<String> list = new ArrayList<String>();
-		list.add("Hello");
-		list.add("ASD");
-		list.add("asdasdasd");
+		List<String> sList = new ArrayList<String>();
+		sList.add("Tomas");
+		sList.add("Jack");
+		sList.add("Edward");
 		
-		// Collection stream 생성
-		Stream<String> stream = list.stream();
-		stream.forEach(e->System.out.println(e));
+		Stream<String> stream = sList.stream(); // stream Method 로 생성
+		stream.forEach(s -> System.out.println(s));
 		
 		System.out.println();
 		
-		list.stream().sorted().forEach(e->System.out.println("정렬 : " + e));
+		// stream 은 사용할떄마다 생성해주어야 함. 
+		// String 은 comparable 이 생성되어있기 때문에 sorted 동작함. 타 객체의 경우 comparable 작성해주어야 함
+		sList.stream().sorted().forEach(s -> System.out.println(s));
 		
-		// 원소의 길이 반환
-		list.stream().map(s->s.length()).forEach(n->System.out.println(n));
+		
+		System.out.println();		
+		sList.stream().map(s -> s.length()).forEach(n-> System.out.println(n));
+		
 	}
 
 }

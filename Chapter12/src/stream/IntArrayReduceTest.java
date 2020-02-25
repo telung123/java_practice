@@ -2,7 +2,7 @@ package stream;
 
 import java.util.Arrays;
 
-public class IntArrayTest {
+public class IntArrayReduceTest {
 
 	public static void main(String[] args) {
 		
@@ -13,6 +13,9 @@ public class IntArrayTest {
 		
 		System.out.println(total + "/" + count);
 		
+
+		System.out.print("Reduce : ");
+		System.out.println(Arrays.stream(arr).reduce(0, (a,b)-> a+b));
 		
 	}
 }
